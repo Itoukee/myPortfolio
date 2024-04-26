@@ -1,18 +1,16 @@
-import { Suspense } from "react";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
 import Delorean from "./components/Delorean";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
+import CameraRig from "./components/CameraRig";
 
 const App = () => {
   return (
-    <div className="App">
-      <Canvas>
-        <Suspense fallback={null}>
-          <Delorean />
-          <OrbitControls />
-          <Environment preset="sunset" background />
-        </Suspense>
+    <div className="w-screen h-screen overflow-hidden">
+      <Canvas shadows className="w-screen h-screen overflow-hidden sticky">
+        <Delorean />
+        <Environment preset="dawn" />
+        <CameraRig />
       </Canvas>
     </div>
   );
