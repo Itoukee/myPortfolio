@@ -16,6 +16,9 @@ export default {
       animation: {
         gradient: "animatedgradient 6s ease infinite alternate",
       },
+      backgroundImage: {
+        space: "url('/space.png')",
+      },
     },
   },
   plugins: [],
